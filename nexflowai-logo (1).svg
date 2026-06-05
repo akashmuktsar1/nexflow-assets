@@ -1,0 +1,109 @@
+<svg width="400" height="120" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#020509;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#070d18;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Cyan glow gradient for icon -->
+    <linearGradient id="iconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0099cc;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Text gradient -->
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#eef0f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b0c4d8;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Glow filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Outer glow -->
+    <filter id="outerGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background rounded rect -->
+  <rect width="400" height="120" rx="16" fill="url(#bgGrad)"/>
+
+  <!-- Subtle border -->
+  <rect width="400" height="120" rx="16" fill="none" stroke="rgba(0,212,255,0.15)" stroke-width="1"/>
+
+  <!-- ICON: Abstract N flow symbol -->
+  <!-- Outer hexagon/circle base -->
+  <circle cx="60" cy="60" r="38" fill="rgba(0,212,255,0.06)" stroke="rgba(0,212,255,0.2)" stroke-width="1"/>
+  <circle cx="60" cy="60" r="30" fill="rgba(0,212,255,0.08)" stroke="rgba(0,212,255,0.15)" stroke-width="1"/>
+
+  <!-- Flow lines - automation symbol -->
+  <!-- Main N shape stylized as flow -->
+  <g filter="url(#glow)">
+    <!-- Left vertical bar -->
+    <rect x="38" y="38" width="7" height="44" rx="3.5" fill="url(#iconGrad)"/>
+
+    <!-- Right vertical bar -->
+    <rect x="75" y="38" width="7" height="44" rx="3.5" fill="url(#iconGrad)"/>
+
+    <!-- Diagonal connector -->
+    <path d="M45 38 L75 82" stroke="url(#iconGrad)" stroke-width="7" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- Accent dots - flow indicators -->
+  <circle cx="38" cy="34" r="4" fill="#00d4ff" opacity="0.9" filter="url(#glow)"/>
+  <circle cx="82" cy="86" r="4" fill="#00d4ff" opacity="0.9" filter="url(#glow)"/>
+
+  <!-- Small accent lines suggesting automation flow -->
+  <line x1="95" y1="48" x2="103" y2="48" stroke="rgba(0,212,255,0.4)" stroke-width="2" stroke-linecap="round"/>
+  <line x1="95" y1="60" x2="105" y2="60" stroke="rgba(0,212,255,0.6)" stroke-width="2" stroke-linecap="round"/>
+  <line x1="95" y1="72" x2="103" y2="72" stroke="rgba(0,212,255,0.4)" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- WORDMARK: NexFlow -->
+  <text
+    x="120"
+    y="52"
+    font-family="'Arial Black', 'Helvetica Neue', sans-serif"
+    font-weight="900"
+    font-size="32"
+    letter-spacing="-1.5"
+    fill="url(#textGrad)"
+  >Nex<tspan fill="#00d4ff" filter="url(#glow)">Flow</tspan></text>
+
+  <!-- AI tag -->
+  <text
+    x="122"
+    y="74"
+    font-family="'Arial', sans-serif"
+    font-weight="400"
+    font-size="13"
+    letter-spacing="5"
+    fill="rgba(0,212,255,0.7)"
+  >ARTIFICIAL INTELLIGENCE</text>
+
+  <!-- Tagline -->
+  <text
+    x="122"
+    y="95"
+    font-family="'Arial', sans-serif"
+    font-weight="300"
+    font-size="10.5"
+    letter-spacing="2"
+    fill="rgba(238,240,246,0.35)"
+  >YOUR BUSINESS. ON AUTOPILOT.</text>
+
+  <!-- Bottom accent line -->
+  <line x1="120" y1="102" x2="375" y2="102" stroke="rgba(0,212,255,0.12)" stroke-width="1"/>
+  <line x1="120" y1="102" x2="200" y2="102" stroke="rgba(0,212,255,0.5)" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
